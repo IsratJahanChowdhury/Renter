@@ -9,3 +9,18 @@ color: white;
 padding: 20px;
 box-sizing: border-box;
 }
+.box{
+background: rgna(255,255, 255, 0.2);
+padding:25px;
+border-radius: 10px;
+width: 100%;
+max-width:880px;
+text-align:center;
+}
+.home-img{
+width:100%;
+max-width:400px;
+height:auto;
+border-radius:10px;
+margin-bottom:15px;
+}
