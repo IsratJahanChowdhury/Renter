@@ -10,7 +10,7 @@ padding: 20px;
 box-sizing: border-box;
 }
 .box{
-background: rgna(255,255, 255, 0.2);
+background: rgba(255,255, 255, 0.2);
 padding:25px;
 border-radius: 10px;
 width: 100%;
