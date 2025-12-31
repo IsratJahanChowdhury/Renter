@@ -24,3 +24,19 @@ height:auto;
 border-radius:10px;
 margin-bottom:15px;
 }
+a{
+    display:inline-block;
+    margin:8px;
+    padding:10px 15px;
+    background: white;
+    color:#3498db;
+    text-decoration:none;
+    border-radius: 5px;
+    font-weight:bold;
+}
+a:hover{
+    background: #ecf0f1;
+}
+hr{
+    margin:20 px 0;
+}
