@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Sign Up</title>
+        <link rel="stylesheet"href="../stylesheets/signup.css">
 </head>
 <body>
     <div class="container">
@@ -15,6 +16,10 @@
 <div class="message">
     <?php if(!empty($message))echo $message;?>
 </div>
+<div class="back">
+    <a href="login.php">Back to Login</a>
 </div>
+</div>
+
 </body>
 </html>
