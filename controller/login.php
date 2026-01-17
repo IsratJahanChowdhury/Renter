@@ -11,16 +11,16 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
     $result=mysqli_query($conn,$sql);
     
     if(mysqli_num_rows($result)==1)
-        {
+           {
             $_SESSION["username"]=$cookieUser;
             header("Location:dashboard.php");
             exit();
-        }
-        else
-        {
+           }
+           else
+           {
           setcookie("username", "", time()-3600 ,"/");
-        }
-        if(isset($_SESSION["username"]))
+           }
+           if(isset($_SESSION["username"]))
             {
                 header("Location:dashboard.php");
                 exit();
@@ -33,7 +33,7 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
             else{
                 $username=trim($_POST["username"]);
             }
-        if(empty($_POST["password"]))
+           if(empty($_POST["password"]))
             {
                 $passError="Password is required";
             }
@@ -73,4 +73,4 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
              }
            else{
               $error="User not found";
-               }
+               }}
