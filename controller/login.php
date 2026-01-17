@@ -40,11 +40,18 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
             else{
                 $password=$_POST["password"];
             }
-            if(empty)($userError)&& empty($passError))
+            if(empty($userError)&& empty($passError))
                 {
                     $sql="SELECT * FROM users WHERE username='$username'";
                     $result=mysqli_query($conn,$sql);
-                    
                 }
+                if(mysqli_num_rows($result)==1)
+                    {
+                        $row=mysqli_fetch_assoc($results);
+                    }
+                    if(password_verify($password,$row['password']))
+                        {
+                            $_SESSION["username"]=$username;
+                        }
 
 }
