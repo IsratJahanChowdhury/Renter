@@ -45,13 +45,32 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
                     $sql="SELECT * FROM users WHERE username='$username'";
                     $result=mysqli_query($conn,$sql);
                 }
-                if(mysqli_num_rows($result)==1)
-                    {
-                        $row=mysqli_fetch_assoc($results);
-                    }
-                    if(password_verify($password,$row['password']))
-                        {
-                            $_SESSION["username"]=$username;
-                        }
+            if(mysqli_num_rows($result)==1)
+                {
+                $row=mysqli_fetch_assoc($results);
+                }
+            if(password_verify($password,$row['password']))
+               {
+                 $_SESSION["username"]=$username;
+                        
+            if(isset($_POST["remember"]))
+               {
+               setcookie("username",$username,time()+(86400*30),"/");
+               }
+            else
+              {
+               setcookie("username","",time()-3600,"/");
+              } 
+                 header("Location:dashboard.php");
+                exit();
+                }
+            else
+             {
+                $error="Invalid username or password";
+             }
+                        
 
-}
+             }
+           else{
+              $error="User not found";
+               }
