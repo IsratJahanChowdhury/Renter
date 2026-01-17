@@ -33,6 +33,18 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
             else{
                 $username=trim($_POST["username"]);
             }
-        
+        if(empty($_POST["password"]))
+            {
+                $passError="Password is required";
+            }
+            else{
+                $password=$_POST["password"];
+            }
+            if(empty)($userError)&& empty($passError))
+                {
+                    $sql="SELECT * FROM users WHERE username='$username'";
+                    $result=mysqli_query($conn,$sql);
+                    
+                }
 
 }
