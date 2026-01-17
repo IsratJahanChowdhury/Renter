@@ -20,5 +20,19 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
         {
           setcookie("username", "", time()-3600 ,"/");
         }
+        if(isset($_SESSION["username"]))
+            {
+                header("Location:dashboard.php");
+                exit();
+            }
+            if($_SERVER["REQUEST_METHOD"]=="POST"){
+                
+            if(empty($_POST["username"])){
+            $userError="Usename is required";
+            }
+            else{
+                $username=trim($_POST["username"]);
+            }
+        
 
 }
