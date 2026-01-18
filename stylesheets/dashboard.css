@@ -68,7 +68,20 @@ body{
     color:#666;
     font-size:14px;
 }
-a{
-    text-decoration:none;
-    color:inherit;
+.home-btn a{
+    color:#3498db;
 }
+.logout-btn{
+    display:block;
+    width:120px;
+    margin:30px auto;
+    text-align:center;
+    background:#bd1c0b;
+    color:white;
+    padding:10px;
+    border-radius:6px;
+}
+.logout-btn a{
+    color:white;
+}
+
