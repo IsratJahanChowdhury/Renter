@@ -1,0 +1,16 @@
+<?php
+session_start();
+if(!isset($_SESSION["username"]))
+    {
+        header("Location:login.php");
+        exit();
+    }
+   if(isset($_COOKIE["username"]))
+    {
+        $displayName=$_COOKIE["username"];
+    }
+    else
+    {
+        $displayName=$_SESSION["username"];
+    }
+?>
