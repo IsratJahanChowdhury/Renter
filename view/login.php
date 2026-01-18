@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../stylesheets/login.css">
     </head>
 <body>
+    <a href="../view/home.php" class="home-btn">Home</a>
     <div class="login-box">
     <h2>&#128274;Login</h2>
     <p>Welcome back! Please login</p>
