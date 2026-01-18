@@ -29,7 +29,7 @@
 
     <input type="submit" value="Login" class="login-btn">
     <div class= "centre-box">
-        <span>Don’t have an account?</span>
+        <span>Don’t have an account?</span><br>
         <a href="../view/signup.php">Sign Up</a>
     </div>
     </form>
@@ -40,6 +40,6 @@
     Rental Item Marketplace
     </div>
     </div>
-<script src="../js/login.js"></script>
+<script src="../javascript/login.js"></script>
 </body>
 </html>
