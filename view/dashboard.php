@@ -42,13 +42,24 @@
     <h3>Make Complaint</h3>
     <p>Report an issue</p>
     </div>
+    
+    <div class="card">
+    <div class="icon">&#128184;</div>
+    <h3>Request Refund</h3>
+    <p>Ask for Refund</p>
+    </div>
 
+    <div class="card">
+    <div class="icon">&#128179;</div>
+    <h3>Make Payment</h3>
+    <p>Pay rental charges</p>
+    </div>
 
-
-
-
-
-
-
+    <div class="card">
+    <div class="icon">&#11088;</div>
+    <h3>Submit Review</h3>
+    <p>Rate and review item</p>
+    </div>
+    <a href="../control/logout.php"class="logout-btn">Logout</a>
 </body>
 </html>
