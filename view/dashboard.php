@@ -18,12 +18,32 @@
     </div>
 
     <div class="container">
-        
+
     <div class="card">
     <div clsss="icon">&#128230;</div>
     <h3>Book item</h3>
     <p>Rent an available item</p>
     </div>
+
+    <div class="card">
+    <div class="icon">&#128269;</div>
+    <h3>Search</h3>
+    <p>Find items by name</p>
+    </div>
+
+    <div class="card">
+    <div class="icon">&#10060;</div>
+    <h3>Cancel Booking</h3>
+    <p>Cancel your booking</p>
+    </div>
+     
+    <div class="card">
+    <div class="icon">&#9997;</div>
+    <h3>Make Complaint</h3>
+    <p>Report an issue</p>
+    </div>
+
+
 
 
 
