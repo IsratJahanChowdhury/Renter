@@ -2,7 +2,6 @@ body{
     margin:0;
     font-family:Arial,sans-serif;
     background:linear-gradient(120deg,#3498db,#2ecc71);
-    position:sticky;
 }
 .home-btn
 {
@@ -15,6 +14,10 @@ body{
     text-decoration:none;
     color:#3498db;
     font-weight:bold;
+}
+.home-btn:hover
+{
+    background:#ecf0f1;
 }
 .header
 {
@@ -36,7 +39,7 @@ body{
 {
     padding:30px;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
 }
 .card
@@ -68,9 +71,7 @@ body{
     color:#666;
     font-size:14px;
 }
-.home-btn a{
-    color:#3498db;
-}
+
 .logout-btn{
     display:block;
     width:120px;
@@ -80,8 +81,11 @@ body{
     color:white;
     padding:10px;
     border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
 }
-.logout-btn a{
-    color:white;
+.a{ 
+    text-decoration:none;
+    color:#333;
 }
 
