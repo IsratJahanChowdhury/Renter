@@ -11,9 +11,8 @@ if(isset($_SESSION["username"]))
   exit();
 }
 
-    if($_SERVER["REQUEST_METHOD"]=="POST")
-        {
-if(empty($_POST["username"]))
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    if(empty($_POST["username"]))
     {
         $userError="Username is required";
     }
@@ -22,16 +21,22 @@ if(empty($_POST["username"]))
         $username=trim($_POST["username"]);
     }
     if(empty($_POST["password"]))
-        {
-            $passError="Password is required";
-        }
+    {
+        $passError="Password is required";
+    }
     else
+    {
+        $password=$_POST["password"];
+    }
+    if(empty($userError)&&empty($passError))
         {
-            $password=$_POST["password"];
-        }
-    
-       
-
+            $sql="SELECT * FROM users WHERE username='$username'";
+            $result=mysqli_query($conn,$sql);
+    if(mysqli_num_rows($result)==1)
+        {
+            $row=mysqli_fetch_assoc($result);
+   
+    }?>
 
 
 
@@ -39,5 +44,4 @@ if(empty($_POST["username"]))
 
 
          
-            }
-            ?>
+  
