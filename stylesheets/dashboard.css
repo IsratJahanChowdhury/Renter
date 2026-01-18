@@ -1,0 +1,18 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(120deg,#3498db,#2ecc71);
+    position:sticky;
+}
+.home-btn
+{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:white;
+    padding:8px 15px;
+    border-radius:6px;
+    text-decoration:none;
+    color:#3498db;
+    font-weight:bold;
+}
