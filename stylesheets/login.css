@@ -24,3 +24,21 @@ body{
   text-align:center;
   color:#666;
 }
+.input-group
+{
+  display:flex;
+  align-items:cwnter;
+  border:1px solid #ccc;
+  border-radius:6px;
+  padding:0 10px;
+  margin-bottom:15px;
+}
+.input-group i {
+  margin-right:8px;
+}
+.input-group input{
+  border:none;
+  outline:none;
+  width:100%;
+  padding:10px 0;
+}
