@@ -11,7 +11,7 @@ body{
     position: absolute;
     top: 20px;
     right:25px;
-    background-color:#007bff;
+    background-color:#003366;
     color:white;
     padding: 8px 14px;
     text-decoration:none;
@@ -20,7 +20,7 @@ body{
     font-size:14px;
   }
   .home-btn:hover{
-    background-color:#fff;
+    background-color:#0055aa;
   }
 .login-box{
   background:#fff;
@@ -75,10 +75,13 @@ body{
 {
   width:100%;
   padding:10px;
-  background:#3498db;
+  background:#003366;
   border:none;
   color:white;
   border-radius:6px;
+}
+.login-btn:hover{
+  background-color: #0055aa;
 }
 .error
 {
