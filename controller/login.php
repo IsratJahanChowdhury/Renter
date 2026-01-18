@@ -35,7 +35,26 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(mysqli_num_rows($result)==1)
         {
             $row=mysqli_fetch_assoc($result);
-   
+    if(password_verify($password,$row["password"]))
+        {
+            $_SESSION["username"]=$username;
+    if(isset($_POST["remember"]))
+        {
+            setcookie("username",$username,time()+(86400*30),"/");
+        }
+            header("Location:dashboard.php");
+            exit();
+        }
+    else
+         {
+             $error="Invalid username or password";
+        }
+        }
+    else
+        {
+             $error="User not found";
+        }
+        }
     }?>
 
 
