@@ -29,7 +29,7 @@ body{
 .input-group
 {
   display:flex;
-  align-items:cwnter;
+  align-items:center;
   border:1px solid #ccc;
   border-radius:6px;
   padding:0 10px;
@@ -52,7 +52,7 @@ body{
   font-size:13px;
   cursor:pointer;
 }
-.center-box
+.centre-box
 {
   text-align:center;
   margin-top:15px;
