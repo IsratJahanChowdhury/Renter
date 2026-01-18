@@ -1,3 +1,4 @@
+<?php include("../controller/signup.php");?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,10 +17,6 @@
 <div class="message">
     <?php if(!empty($message))echo $message;?>
 </div>
-<div class="back">
-    <a href="login.php">Back to Login</a>
 </div>
-</div>
-
 </body>
 </html>
