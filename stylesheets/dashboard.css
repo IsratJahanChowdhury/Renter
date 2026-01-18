@@ -55,3 +55,20 @@ body{
     top:-5px;
     background:#ecf4ff;
 }
+.icon
+{
+    font-size:45px;
+    margin-bottom:10px;
+}
+.card h3{
+    margin: 10px 0;
+    color: #333;
+}
+.card p{
+    color:#666;
+    font-size:14px;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
