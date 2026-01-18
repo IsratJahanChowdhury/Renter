@@ -4,9 +4,10 @@ include("../database/rent.php");
 $username="";
 $userError="";
 $passError="";
-$Error="";
-if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
+$error="";
+if(!isset($_SESSION["username"]) && isset($_COOKIE["username"])){
     $cookieUser=$_COOKIE["username"];
+
     $sql= "SELECT * FROM users WHERE username='$cookieUser'";
     $result=mysqli_query($conn,$sql);
     
@@ -19,7 +20,7 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
            else
            {
           setcookie("username", "", time()-3600 ,"/");
-           }
+           }}
            if(isset($_SESSION["username"]))
             {
                 header("Location:dashboard.php");
@@ -28,7 +29,7 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
             if($_SERVER["REQUEST_METHOD"]=="POST"){
                 
             if(empty($_POST["username"])){
-            $userError="Usename is required";
+            $userError="Username is required";
             }
             else{
                 $username=trim($_POST["username"]);
@@ -44,11 +45,11 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
                 {
                     $sql="SELECT * FROM users WHERE username='$username'";
                     $result=mysqli_query($conn,$sql);
-                }
+                
             if(mysqli_num_rows($result)==1)
                 {
-                $row=mysqli_fetch_assoc($results);
-                }
+                $row=mysqli_fetch_assoc($result);
+                
             if(password_verify($password,$row['password']))
                {
                  $_SESSION["username"]=$username;
@@ -67,10 +68,10 @@ if(!isset($_SESSION["username"])&& isset($_COOKIE["username"])){
             else
              {
                 $error="Invalid username or password";
-             }
-                        
-
-             }
+             }}
            else{
               $error="User not found";
-               }}
+               }
+            }
+            }
+            ?>
