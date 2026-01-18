@@ -20,7 +20,7 @@
     <div class="container">
 
     <div class="card">
-    <div clsss="icon">&#128230;</div>
+    <div class="icon">&#128230;</div>
     <h3>Book item</h3>
     <p>Rent an available item</p>
     </div>
@@ -60,6 +60,7 @@
     <h3>Submit Review</h3>
     <p>Rate and review item</p>
     </div>
-    <a href="../control/logout.php"class="logout-btn">Logout</a>
+    </div>
+    <a href="../controller/logout.php"class="logout-btn">Logout</a>
 </body>
 </html>
