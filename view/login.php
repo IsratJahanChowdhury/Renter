@@ -1,8 +1,9 @@
+<?php include("../controller/login.php");?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</login>
-        <link rel="stylesheet" href="../css/login.css">
+        <title>Login</title>
+        <link rel="stylesheet" href="../stylesheets/login.css">
     </head>
 <body>
     <div class="login-box">
@@ -28,10 +29,13 @@
 
     <input type="submit" value="Login" class="login-btn">
     <div class= "centre-box">
-        <span>Don’t have an account?></span>
+        <span>Don’t have an account?</span>
         <a href="../view/signup.php">Sign Up</a>
     </div>
     </form>
+    <?php if ($userError) echo "<div class='error'>$userError</div>";?>
+    <?php if($passError) echo "<div class='error'>$passError</div>";?>
+    <?php if ($error) echo "<div class='error'>$error</div>";?>
     <div class = "footer-text">
     Rental Item Marketplace
     </div>
