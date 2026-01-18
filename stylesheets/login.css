@@ -66,3 +66,17 @@ body{
   color:white;
   border-radius:6px;
 }
+.error
+{
+  background: #ffe0e0;
+  color:#b00000;
+  padding:10px;
+  margin-top:10px;
+  text-align:center;
+}
+.footer-text
+{
+  text-align:center;
+  margin-top:15px;
+  color:#555
+}
