@@ -39,3 +39,19 @@ body{
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
+.card
+{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+}
+.card:hover
+{
+    position:relative;
+    top:-5px;
+    background:#ecf4ff;
+}
