@@ -1,7 +1,7 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background: limear-gradient(120deg,#3498db,#2ecc71);
+background: linear-gradient(120deg,#3498db,#2ecc71);
 height: 100vh;
 display:flex;
 justify-content:center;
@@ -51,16 +51,4 @@ margin-top:10px;
 text-decoration:none;
 color:#003366;
 font-weight:bold;
-}
-.back{
-    margin-top:15px;
-    text-align:center;
-}
-.back a {
-    text-decoration:none;
-    color:#003366;
-    font-weight:bold;
-}
-.back a:hover{
-    text-decoration:underline;
 }
