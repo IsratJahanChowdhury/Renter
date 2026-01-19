@@ -1,15 +1,7 @@
 <?php
+include("../controller/book.php");
 include("../database/rent.php");
-if(isset($_GET['q'])&&$_GET['q']!="")
-    {
-        $q=$_GET['q'];
-        $result=mysqli_query($conn,"SELECT * FROM items WHERE name LIKE '%$q%'");
-    }
-    else
-        {
-            $result=mysqli_query($conn,"SELECT*FROM items");
-        }
-        ?>
+            $result=mysqli_query($conn,"SELECT*FROM items"); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,29 +11,28 @@ if(isset($_GET['q'])&&$_GET['q']!="")
     <body>
         <a href="dashboard.php" class="back-btn">Back</a>
         <div class="page-box">
-
-        <form method="get">
-        <input type="text" name="q" placeholder="Search item">
-        <button type="submit">&#128269;Search</button>
-        </form>
         <h2>Book Items</h2>
-        <div class="items-scroll">
+  
+        <input type="text"id="searchBox" placeholder="Search items"onkeyuo="searchItem()">
+        <button onclick="searchItem()">&#128269;Search</button>
+
+        <div class="items-scroll"id="itemResult">
         <?php
         if(mysqli_num_rows($result)>0)
             {
-                while($row=mysqlo_fetch_assoc($result))
+                while($row=mysqli_fetch_assoc($result))
                     {
                         ?>
                         <div class="item-box">
-                        <img src="../image/<?php echo $row['image'];?>"alt="item">
+                        <img src="../images/<?php echo $row['image'];?>"alt="item">
                         <h3><?php echo $row['name'];?> </h3>
                         <p>Price:Tk<?php echo $row['price'];?></p>
                         <p>Available:<?php echo $row['quantity'];?></p>
                         <?php if($row['quantity']>0)
                     {
                         ?>
-                        <form method="post"action="../control/book.php">
-                        input type="hidden"name="item_id" value="<?php echo $row['id'];?>">
+                        <form method="post"action="../controller/book.php">
+                        <input type="hidden"name="item_id" value="<?php echo $row['id'];?>">
                         <label>From date</label>
                         <input type="date" name="from_date"required>
                         <label>To Date</label>
@@ -71,6 +62,7 @@ if(isset($_GET['q'])&&$_GET['q']!="")
                         ?>
                         </div>
 </div>
+        <script src="../javascript/search.js"></script>
 </body>
 </html>
 
