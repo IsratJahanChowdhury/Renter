@@ -44,6 +44,14 @@ button:hover
     background:#2980b9;
 
 }
+.item-box
+{border: 1px solid#ddd;
+    padding:15px;
+    margin-bottom:20px;
+    text-align:center;
+    border: radius 8px;
+
+}
 .item-box img
 {
     width:150px;
@@ -60,7 +68,7 @@ button:hover
 .item-box p 
 {
     margin:5px 0;
-    color#555;
+    color:#555;
 }
 .not-available
 {
@@ -74,7 +82,7 @@ button:hover
     font-weight:bold;
     margin:15px 0;
 }
-items-scroll
+.items-scroll
 {
     max-height:400px;
     overflow-y:auto;
