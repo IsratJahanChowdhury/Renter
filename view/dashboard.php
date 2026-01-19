@@ -16,9 +16,8 @@
     <div class="header">
     Welcome,<?php echo $displayName;?>! Ready to manage your rentals?
     </div>
-
+    <a href="../view/book.php"class="card-link">
     <div class="container">
-
     <div class="card">
     <div class="icon">&#128230;</div>
     <h3>Book item</h3>
