@@ -24,3 +24,18 @@ if(isset($_GET['q'])&&$_GET['q']!="")
         <input type="text" name="q" placeholder="Search item">
         <button type="submit">&#128269;Search</button>
         </form>
+        <h2>Book Items</h2>
+        <div class="items-scroll">
+        <?php
+        if(mysqli_num_rows($result)>0)
+            {
+                while($row=mysqlo_fetch_assoc($result))
+                    {
+                        ?>
+                        <div class="item-box">
+                        <img src="../image/<?php echo $row['image'];?>"alt="item">
+                        <h3><?php echo $row['name'];?> </h3>
+                        <p>Price:Tk<?php echo $row['price'];?></p>
+                        <p>Available:<?php echo $row['quantity'];?></p>
+                    }
+            }
