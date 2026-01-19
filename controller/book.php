@@ -17,3 +17,23 @@ if(!isset($_SESSION['username']))
     {
        $days=1;
     }
+    $total=$days*$item['price'];
+
+if($item['quantity']>0)
+    {
+      mysqli_query($conn,"INSERT INTO bookings(item_id,from_date,to_date)VALUES('$item_id','$from','$to')");
+      
+      mysqli_query($conn,"UPDATE items SET quantity - 1 WHERE id='$item_id'");
+      $_SESSION['booking']=
+      [
+        'name'=>$item['name'],
+        'image'=>$item['image'],
+        'price'=>$item['price'],
+        'days'=>$days,
+        'total'=>$total
+      ];
+      header("Location:../view/booking_status.php");
+      exit();
+    }
+    
+        
