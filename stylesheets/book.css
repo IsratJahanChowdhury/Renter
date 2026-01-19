@@ -16,3 +16,31 @@ h2
     text-align:center;
     color:#3498db;
 }
+form
+{
+    margin-bottom:15px;
+}
+input
+{
+    width:100%;
+    padding:8px;
+    margin:6px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+button
+{
+width:100%;
+background:#3498db;
+color:white;
+padding:8px;
+border:none;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+}
+button:hover
+{
+    background:#2980b9;
+    
+}
