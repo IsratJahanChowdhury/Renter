@@ -89,3 +89,8 @@ body{
     color:#333;
 }
 
+.card-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
