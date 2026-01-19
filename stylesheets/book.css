@@ -80,3 +80,18 @@ items-scroll
     overflow-y:auto;
     padding-right:5px;
 }
+.back-btn
+{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#003366;
+    color:white;
+    padding:10px 14px;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:14px;
+}
+.back-btn:hover{
+    background:#0055aa;
+}
