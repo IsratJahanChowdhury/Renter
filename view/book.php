@@ -1,5 +1,5 @@
 <?php
-include("../controller/book.php");
+
 include("../database/rent.php");
             $result=mysqli_query($conn,"SELECT*FROM items"); ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ include("../database/rent.php");
         <div class="page-box">
         <h2>Book Items</h2>
   
-        <input type="text"id="searchBox" placeholder="Search items"onkeyuo="searchItem()">
+        <input type="text"id="searchBox" placeholder="Search items"onkeyup="searchItem()">
         <button onclick="searchItem()">&#128269;Search</button>
 
         <div class="items-scroll"id="itemResult">
