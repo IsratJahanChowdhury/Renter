@@ -1,4 +1,6 @@
-<?phpinclude("../database/rent.php");
+<?php
+session_start();
+include("../database/rent.php");
 if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $item_id=$_POST['item_id'];
@@ -9,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $item = mysqli_fetch_assoc($result);
      
     $days = (strtotime($to)- strtotime($from)) / (60*60*24);
-     if($days <=0) days=1;
+     if($days <=0) $days=1;
      $_SESSION['booking']=
      [
         'item_id'=> $item['id'],
@@ -19,6 +21,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         'days'=> $days,
         'total' => $days * $item['price']
      ];
-     header("Location:booking_status.php");
+     header("Location:../controller/booking_status.php");
      exit();
     }
