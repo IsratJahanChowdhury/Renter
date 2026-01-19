@@ -92,5 +92,6 @@ body{
 .card-link{
     text-decoration:none;
     color:inherit;
-    display:block;
+    display:contents;
+
 }
