@@ -12,6 +12,12 @@
             <textarea name="message" placeholder="Write your complaint "required></textarea>
             <button type ="submit">Submit Complaint</button>
 </form>
+<?php
+if(isset($_GET['success'])&& $_GET['success']==1)
+    {
+        echo "<p class='message'>Complaint submitted successfully!</p>";
+    }
+    ?>
 </div>
 </body>
 </html>
