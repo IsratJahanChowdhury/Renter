@@ -4,7 +4,7 @@ $q=isset($_GET['q'])?$_GET['q']:"";
 
 $sql="SELECT*FROM items WHERE name LIKE '%$q%'";
 $result=mysqli_query($conn,$sql);
-items=[];
+$items=[];
 
 while($row=mysqli_fetch_assoc($result))
     {
