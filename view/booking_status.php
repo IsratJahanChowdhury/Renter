@@ -13,7 +13,7 @@
         <p>Days:<?php echo $booking['days'];?></p>
         <p>Total: Tk <?php echo $booking['total'];?></p>
 
-        <form action= "../controller/payment.php" method="post">
+        <form action= "../controller/confirm_payment.php" method="post">
         <button type="submit" >Make Payment </button>
         </form>
 </div>
