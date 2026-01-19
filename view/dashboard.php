@@ -42,13 +42,6 @@
     <p>Report an issue</p>
     </div>
     
-    <a href="../view/request_refund.php"class="card-link">
-    <div class="card">
-    <div class="icon">&#128184;</div>
-    <h3>Request Refund</h3>
-    <p>Ask for Refund</p>
-    </div>
-    </a>
     
     <a href="../view/submit_review.php"class="card-link">
     <div class="card">
