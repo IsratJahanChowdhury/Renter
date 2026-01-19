@@ -6,6 +6,8 @@ if(!isset($_SESSION['username']))
         exit();
     }
     include("../database/rent.php");
+    if($_SERVER["REQUEST_METHOD"]=="POST")
+    {
     $item_id=$_POST['item_id'];
     $from=$_POST['from_date'];
     $to=$_POST['to_date'];
@@ -34,6 +36,13 @@ if($item['quantity']>0)
       ];
       header("Location:../view/booking_status.php");
       exit();
+    }
+else
+    {
+      $_SESSION['error']="Product is not available right now";
+      header("Location:../view/booking_status.php");
+      exit();
+    }
     }
     
         
